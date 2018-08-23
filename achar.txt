@@ -1,0 +1,39 @@
+
+package robo;
+
+import java.util.Random;
+import java.util.Scanner;
+
+
+public class Robo {
+    public static void main(String[] args) {
+        Scanner tcl = new Scanner(System.in);
+        Random aleatorio = new Random();
+        boolean encontrado = false;
+        boolean sair = false;
+        int vetor[] = new int[7];
+        while (sair == false) {
+                System.out.println("Digite um numero a ser encontrado ");
+                int numero = tcl.nextInt();
+                for (int i = 0; i < vetor.length; i++) {
+                        vetor[i] = aleatorio.nextInt(15);
+                }
+                for(int i = 0; i < vetor.length; i++) {
+                        if(vetor[i] == numero) {
+                                System.out.println("numero encontrado na posicao " + vetor[i]);
+                                System.out.println();
+                                encontrado = true;
+                                break;
+                        }
+                }
+                if(encontrado == false) {
+                        System.out.println("Valor nao encontrado");
+                        }
+
+        }
+
+    }
+    
+}
+
+
